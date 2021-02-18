@@ -33,6 +33,7 @@ body{
   background-position: center;
   font-family: 'Andika', sans-serif;
   background-image: url("../images/pigeon-background.JPEG");
+  background-repeat: no-repeat;
   background-color: #DDDDDD;
 
   /*Req 1*/
@@ -70,6 +71,7 @@ a{
 td{
   border-top: 2px solid #000000;
   padding: 10px; 
+  text-align: center;
 }
 
 /*Req 6b*/
@@ -77,15 +79,10 @@ td{
   color: #FFFFFF;
   min-width: 125px;
   padding: 10px;
-  text-align:center;
+  text-align: center;
+  vertical-align: center;
   text-transform: uppercase;
   background-color: #7e0820;
-}
-
-.colhead:first-child{
-
-  border-left: none;
-  border-right: none;
 }
 
 /*Req 6c*/
@@ -95,14 +92,18 @@ td{
 }
 
 /*Req 6d*/
-tr:nth-child(even) {background: #D1D1D1;} 
+tr:nth-child(even) {
+  background: #D1D1D1;
+} 
 
 /*Req 6e*/
-tr:nth-child(odd) {background: rgba(76, 175, 80, 0)}
+tr:nth-child(odd) {
+  background: rgba(76, 175, 80, 0)
+}
 
 /*Req 6f*/
-td:hover {
-  background-color:rgb(126, 8, 32, .25);
+tr:hover {
+  background-color:rgba(126, 8, 32, .25);
 }
 
 
@@ -112,13 +113,23 @@ table{
     border: 2px solid #000000;  
     margin-left: auto;
     margin-right: auto;
-  }
+}
 
+thead tr:first-child th:first-child{
+  border-top-left-radius: 10px;
+}
 
+thead tr:first-child th:last-child{
+  border-top-right-radius: 10px;
+}
 
-tr:first-child th:first-child{
-  border-left: none}
+tbody tr:last-child td:last-child{
+  border-bottom-right-radius: 10px;
+}
 
+tbody tr:last-child th:first-child{
+  border-bottom-left-radius: 10px;
+}
 /*Add selectors and rules here*/
 
 
