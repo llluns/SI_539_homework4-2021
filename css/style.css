@@ -79,8 +79,8 @@ td{
   color: #FFFFFF;
   min-width: 125px;
   padding: 10px;
-  text-align: center;
-  vertical-align: center;
+  vertical-align: middle;
+  /*horizontal align? */
   text-transform: uppercase;
   background-color: #7e0820;
 }
@@ -98,7 +98,7 @@ tr:nth-child(even) {
 
 /*Req 6e*/
 tr:nth-child(odd) {
-  background: rgba(76, 175, 80, 0)
+  background: transparent;
 }
 
 /*Req 6f*/
@@ -113,7 +113,7 @@ table{
     border: 2px solid #000000;  
     margin-left: auto;
     margin-right: auto;
-  }
+}
 
 thead tr:first-child th:first-child{
   border-top-left-radius: 10px;
@@ -135,6 +135,9 @@ tbody tr:last-child th:first-child{
 
 /*Req 8*/
 footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width:100%;
   background:#000000;
   min-height: 75px;
